@@ -19,12 +19,17 @@ h2 {
   margin-top: 20px;
 }
 
+button{
+  border: 5px;
+  color: #e00a00;
+  border-color: #e00a00;
+}
 .btn-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 40px 0;
-  border: none;
+  /* border: none; */
 }
 .btn-item {
   margin-left: 15px;

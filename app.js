@@ -1,26 +1,26 @@
 const menu = [
   {
     id: 1,
-    title: "Tteokbokki",
-    category: "Korea",
-    price: 10.99,
+    title: "Pirinç Pilavı",
+    category: "Ana Yemek",
+    price: "24,99  TL",
     img:
-      "https://twoplaidaprons.com/wp-content/uploads/2020/09/tteokbokki-top-down-view-of-tteokbokki-in-a-bowl-500x500.jpg",
-    desc: `Spicy rice cakes, serving with fish cake.`,
+      "https://cdn.yemek.com/mnresize/1250/833/uploads/2020/09/tereyagli-pilav-one-cikan.jpg",
+    desc: `Enfes tereyağı ile yapılmış taneleri sayılan şehriyeli pilav.<br>Bir porsiyonu ortalama 318/kcal içerir.`,
   },
   {
     id: 2,
-    title: "Chicken Ramen",
-    category: "Japan",
-    price: 7.99,
+    title: "Karnı Yarık",
+    category: "Ana Yemek",
+    price: "29,99 TL",
     img:
-      "https://www.forkknifeswoon.com/wp-content/uploads/2014/10/simple-homemade-chicken-ramen-fork-knife-swoon-01.jpg",
-    desc: `Chicken noodle soup, serving with vegetables such as soy bean, green onion. In an optional you can ask for egg. `,
+      "https://cdn.yemek.com/mnresize/1250/833/uploads/2022/08/100-gram-kiymayla-karniyarik-one-cikan.jpg",
+    desc: `Bol kıymalı ve fırında yapılmış karnı yarık.<br>100 gram kıyma ile yapılmakta olup bir porsiyonu ortalama 566/kcal içerir.`,
   },
   {
     id: 3,
-    title: "Bibimbap",
-    category: "Korea",
+    title: "Nohut",
+    category: "Ana Yemek",
     price: 8.99,
     img:
       "https://dwellbymichelle.com/wp-content/uploads/2020/05/DWELL-bibimbap.jpg",
@@ -28,8 +28,8 @@ const menu = [
   },
   {
     id: 4,
-    title: "Dan Dan Mian",
-    category: "China",
+    title: "İçli Köfte",
+    category: "Ara Sıcak",
     price: 5.99,
     img:
     "https://www.savingdessert.com/wp-content/uploads/2019/02/Dan-Dan-Noodles-10.jpg",
@@ -37,8 +37,8 @@ const menu = [
   },
   {
     id: 5,
-    title: "Yangzhou Fried Rice",
-    category: "China",
+    title: "Paçanga",
+    category: "Ara Sıcak",
     price: 12.99,
     img:
     "https://salu-salo.com/wp-content/uploads/2013/02/Yangzhou-Fried-Rice1.jpg",
@@ -46,8 +46,8 @@ const menu = [
   },
   {
     id: 6,
-    title: "Onigiri",
-    category: "Japan",
+    title: "Sigara Böreği",
+    category: "Ara Sıcak",
     price: 9.99,
     img:
     "https://www.manusmenu.com/wp-content/uploads/2017/08/Onigiri-3-1-of-1.jpg",
@@ -55,8 +55,8 @@ const menu = [
   },
   {
     id: 7,
-    title: "Jajangmyeon",
-    category: "Korea",
+    title: "Kola",
+    category: "İçecek",
     price: 15.99,
     img:
     "https://www.curiouscuisiniere.com/wp-content/uploads/2020/04/Jajangmyeon-Korean-Noodles-in-Black-Bean-Sauce5.1200H-720x540.jpg",
@@ -64,8 +64,8 @@ const menu = [
   },
   {
     id: 8,
-    title: "Ma Yi Shang Shu",
-    category: "China",
+    title: "Meyve Suyu",
+    category: "İçecek",
     price: 12.99,
     img:
     "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/F688C2F6-86EC-46C4-B9C7-A6BA01DF7437/Derivates/32E3E72A-F786-406D-AF7F-B30980A9AC6C.jpg",
@@ -73,8 +73,8 @@ const menu = [
   },
   {
     id: 9,
-    title: "Doroyaki",
-    category: "Japan",
+    title: "Maden Suyu",
+    category: "İçecek",
     price: 3.99,
     img:
     "https://www.justonecookbook.com/wp-content/uploads/2011/10/Dorayaki-New-500x400.jpg",
@@ -84,29 +84,29 @@ const menu = [
 
 let btnContainerDOM = document.querySelector(".btn-container");
 const section = document.querySelector(".section-center");
-let menuItemDOM = document.getElementsByClassName("menu-items");
+const menuItemDOM = document.getElementsByClassName("menu-items");
 
 
-let japanmenu =[];
-let chinamenu = [];
-let koreamenu = [];
+let anayemekmenu =[];
+let arasicakmenu = [];
+let icecekmenu = [];
 
 for (let i = 0; i < menu.length; i++) {
-  if(menu[i].category === "Japan"){
-    japanmenu.push(menu[i]);
+  if(menu[i].category === "Ana Yemek"){
+    anayemekmenu.push(menu[i]);
     
   }
 }
 
 for (let i = 0; i < menu.length; i++) {
-  if(menu[i].category === "Korea"){
-    koreamenu.push(menu[i]);
+  if(menu[i].category === "Ara Sıcak"){
+    arasicakmenu.push(menu[i]);
   }
 }
 
 for (let i = 0; i < menu.length; i++) {
-  if(menu[i].category === "China"){
-    chinamenu.push(menu[i]);
+  if(menu[i].category === "İçecek"){
+    icecekmenu.push(menu[i]);
   }
 }
 
@@ -119,28 +119,31 @@ function btnDOMFunction (category, menuName){
   btnDOM.id = category;
 };
 
-btnDOMFunction("All", "menu");
+btnDOMFunction("Hepsi", "menu");
 // let btnDOMAll = document.querySelector("#All");
 // btnDOMAll.addEventListener("click", addClickFunction);
-btnDOMFunction("Korea", "koreamenu");
+btnDOMFunction("Ana Yemek", "anayemekmenu");
 // let btnDOMKorea = document.querySelector("#Korea");
 // btnDOMKorea.addEventListener("click", addClickFunction);
-btnDOMFunction("Japan", "japanmenu");
+btnDOMFunction("Ara Sicak", "arasicakmenu");
 // let btnDOMJapan = document.querySelector("#Japan");
-btnDOMFunction("China", "chinamenu");
+btnDOMFunction("İçecek", "icecekmenu");
 // let btnDOMChina = document.querySelector("#China");
+
+
 
 function createDOMFunction (category){
   if (menuItemDOM.length > 0) {
     let counter = menuItemDOM.length;
       for (let i = 0; i < counter; i++) {
-        menuItemDOM[0].remove();
+        section.removeChild(section.firstElementChild);
+        // menuItemDOM[0].remove();
       }
       for(let i = 0; i < category.length; i++){
         let createCol = document.createElement("div");
-        // createCol.classList.add("menu-items", "col-lg-6", "col-sm-12");
+        createCol.classList.add("menu-items", "col-lg-6", "col-sm-12");
         section.appendChild(createCol);
-        createCol.innerHTML = `<div class="menu-items col-lg-6 col-sm-12">
+        createCol.innerHTML = `
         <img
           src=${category[i].img}
           alt=${category[i].title}
@@ -155,7 +158,7 @@ function createDOMFunction (category){
             ${category[i].desc}
           </div>
         </div>
-      </div>
+      
     `
       }
     }
@@ -163,9 +166,9 @@ function createDOMFunction (category){
 else {
     for(let i = 0; i < category.length; i++){
     let createCol = document.createElement("div");
-    // createCol.classList.add("menu-items", "col-lg-6", "col-sm-12");
+    createCol.classList.add("menu-items", "col-lg-6", "col-sm-12");
     section.appendChild(createCol);
-    createCol.innerHTML = `<div class="menu-items col-lg-6 col-sm-12">
+    createCol.innerHTML = `
     <img
       src=${category[i].img}
       alt=${category[i].title}
@@ -180,7 +183,7 @@ else {
         ${category[i].desc}
       </div>
     </div>
-  </div>
+  
 `
   }
   }
