@@ -84,6 +84,8 @@ const menu = [
 
 let btnContainerDOM = document.querySelector(".btn-container");
 const section = document.querySelector(".section-center");
+let menuItemDOM = document.getElementsByClassName("menu-items");
+
 
 let japanmenu =[];
 let chinamenu = [];
@@ -113,23 +115,53 @@ function btnDOMFunction (category, menuName){
   btnContainerDOM.append(btnDOM);
   // btnDOM.type = "button";
   // btnDOM.classList.add("btn", "btn-danger");
-  btnDOM.innerHTML = `<button type = "button" class= "btn btn-danger" onclick = "createDOMFunction(${menuName})">${category}</button>`;
+  btnDOM.innerHTML = `<button type = "button" class= "btn btn-light" onclick = "createDOMFunction(${menuName})">${category}</button>`;
   btnDOM.id = category;
 };
 
-btnDOMFunction("All", menu);
+btnDOMFunction("All", "menu");
 // let btnDOMAll = document.querySelector("#All");
 // btnDOMAll.addEventListener("click", addClickFunction);
-btnDOMFunction("Korea", koreamenu);
+btnDOMFunction("Korea", "koreamenu");
 // let btnDOMKorea = document.querySelector("#Korea");
 // btnDOMKorea.addEventListener("click", addClickFunction);
-btnDOMFunction("Japan", japanmenu);
+btnDOMFunction("Japan", "japanmenu");
 // let btnDOMJapan = document.querySelector("#Japan");
-btnDOMFunction("China", chinamenu);
+btnDOMFunction("China", "chinamenu");
 // let btnDOMChina = document.querySelector("#China");
 
 function createDOMFunction (category){
-  for(let i = 0; i < category.length; i++){
+  if (menuItemDOM.length > 0) {
+    let counter = menuItemDOM.length;
+      for (let i = 0; i < counter; i++) {
+        menuItemDOM[0].remove();
+      }
+      for(let i = 0; i < category.length; i++){
+        let createCol = document.createElement("div");
+        // createCol.classList.add("menu-items", "col-lg-6", "col-sm-12");
+        section.appendChild(createCol);
+        createCol.innerHTML = `<div class="menu-items col-lg-6 col-sm-12">
+        <img
+          src=${category[i].img}
+          alt=${category[i].title}
+          class="photo"
+        />
+        <div class="menu-info">
+          <div class="menu-title">
+            <h4>${category[i].title}</h4>
+            <h4 class="price">${category[i].price}</h4>
+          </div>
+          <div class="menu-text">
+            ${category[i].desc}
+          </div>
+        </div>
+      </div>
+    `
+      }
+    }
+
+else {
+    for(let i = 0; i < category.length; i++){
     let createCol = document.createElement("div");
     // createCol.classList.add("menu-items", "col-lg-6", "col-sm-12");
     section.appendChild(createCol);
@@ -151,6 +183,8 @@ function createDOMFunction (category){
   </div>
 `
   }
+  }
+  
 }
 
 function addClickFunction (event){
