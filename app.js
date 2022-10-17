@@ -108,25 +108,25 @@ for (let i = 0; i < menu.length; i++) {
   }
 }
 
-function btnDOMFunction (category){
+function btnDOMFunction (category, menuName){
   let btnDOM = document.createElement("button");
   btnContainerDOM.append(btnDOM);
-  btnDOM.type = "button";
-  btnDOM.classList.add("btn", "btn-danger");
-  btnDOM.innerHTML = category;
+  // btnDOM.type = "button";
+  // btnDOM.classList.add("btn", "btn-danger");
+  btnDOM.innerHTML = `<button type = "button" class= "btn btn-danger" onclick = "createDOMFunction(${menuName})">${category}</button>`;
   btnDOM.id = category;
 };
 
-btnDOMFunction("All");
-let btnDOMAll = document.querySelector("#All");
-btnDOMAll.addEventListener("click", addClickFunction);
-btnDOMFunction("Korea");
-let btnDOMKorea = document.querySelector("#Korea");
-btnDOMKorea.addEventListener("click", addClickFunction);
-btnDOMFunction("Japan");
-let btnDOMJapan = document.querySelector("#Japan");
-btnDOMFunction("China");
-let btnDOMChina = document.querySelector("#China");
+btnDOMFunction("All", menu);
+// let btnDOMAll = document.querySelector("#All");
+// btnDOMAll.addEventListener("click", addClickFunction);
+btnDOMFunction("Korea", koreamenu);
+// let btnDOMKorea = document.querySelector("#Korea");
+// btnDOMKorea.addEventListener("click", addClickFunction);
+btnDOMFunction("Japan", japanmenu);
+// let btnDOMJapan = document.querySelector("#Japan");
+btnDOMFunction("China", chinamenu);
+// let btnDOMChina = document.querySelector("#China");
 
 function createDOMFunction (category){
   for(let i = 0; i < category.length; i++){
