@@ -13,17 +13,19 @@ h2 {
   font-family: "Great Vibes", cursive;
   font-size: 3rem;
   text-align: center;
-  color: #ff6a23;
+  color: red;
 }
 .menu {
   margin-top: 20px;
 }
 
 button{
-  border: 5px;
-  color: #e00a00;
+  border:#e00a00;
+  /* color: #e00a00; */
+  border: 0.05rem solid;
   border-color: #e00a00;
 }
+
 .btn-container {
   display: flex;
   justify-content: center;
@@ -58,7 +60,7 @@ button{
 }
 
 h4 {
-  color: #e00a00;
+  color: red;
 }
 
 .menu-text {

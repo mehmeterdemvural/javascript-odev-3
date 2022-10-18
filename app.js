@@ -6,80 +6,89 @@ const menu = [
     price: "24,99  TL",
     img:
       "https://cdn.yemek.com/mnresize/1250/833/uploads/2020/09/tereyagli-pilav-one-cikan.jpg",
-    desc: `Enfes tereyağı ile yapılmış taneleri sayılan şehriyeli pilav.<br>Bir porsiyonu ortalama 318/kcal içerir.`,
+    desc: `Enfes tereyağı ile yapılmış taneleri sayılan şehriyeli pilav.<br><br>Bir porsiyonu ortalama 318/kcal içerir.`,
   },
   {
     id: 2,
     title: "Karnı Yarık",
     category: "Ana Yemek",
-    price: "29,99 TL",
+    price: "39,99  TL",
     img:
       "https://cdn.yemek.com/mnresize/1250/833/uploads/2022/08/100-gram-kiymayla-karniyarik-one-cikan.jpg",
-    desc: `Bol kıymalı ve fırında yapılmış karnı yarık.<br>100 gram kıyma ile yapılmakta olup bir porsiyonu ortalama 566/kcal içerir.`,
+    desc: `Bol kıymalı ve fırında yapılmış karnı yarık.<br><br>100 gram kıyma ile yapılmakta olup bir porsiyonu ortalama 566/kcal içerir.`,
   },
   {
     id: 3,
-    title: "Nohut",
+    title: "Köri Soslu Tavuk",
     category: "Ana Yemek",
-    price: 8.99,
+    price: "69,99  TL",
     img:
-      "https://dwellbymichelle.com/wp-content/uploads/2020/05/DWELL-bibimbap.jpg",
-    desc: `Boiling vegetables, serving with special hot sauce`,
+      "https://cdn.yemek.com/mncrop/940/625/uploads/2014/06/kori-soslu-tavuk-yemekcom.jpg",
+    desc: `Harika köri sos ile pişirilmiş tavuk. Pirinç pilavı ve salata ile servis edilir.<br><br>Bir porsiyonu ortalama 318/kcal içerir.`,
   },
   {
     id: 4,
-    title: "İçli Köfte",
-    category: "Ara Sıcak",
-    price: 5.99,
+    title: "İslim Kebabı",
+    category: "Ana Yemek",
+    price: "34,99  TL",
     img:
-    "https://www.savingdessert.com/wp-content/uploads/2019/02/Dan-Dan-Noodles-10.jpg",
-    desc: `Dan dan noodle, serving with green onion `,
+    "https://cdn.yemek.com/mncrop/940/625/uploads/2015/07/islim-kebabi-tarifi-2.jpg",
+    desc: `Dana kıyması ile yapılmış harika islim kebebı.<br><br>Bir porsiyonu ortalama 358/kcal içerir.`,
   },
   {
     id: 5,
-    title: "Paçanga",
-    category: "Ara Sıcak",
-    price: 12.99,
+    title: "İrmik Helvası",
+    category: "Tatlı",
+    price: "29,99  TL",
     img:
-    "https://salu-salo.com/wp-content/uploads/2013/02/Yangzhou-Fried-Rice1.jpg",
-    desc: `Yangzhou style fried rice, serving with bean and pickles `,
+    "https://cdn.yemek.com/mncrop/940/625/uploads/2014/11/irmik-helvasi-yemekcom.jpg",
+    desc: `Tane tane dökülen irmik helvası. Dondurma ile birlikte sıcak servis edilir.<br><br>Bir porsiyonu ortalama 565/kcal içerir.`,
   },
   {
     id: 6,
-    title: "Sigara Böreği",
+    title: "Çi Börek",
     category: "Ara Sıcak",
-    price: 9.99,
+    price: "29,99  TL",
     img:
-    "https://www.manusmenu.com/wp-content/uploads/2017/08/Onigiri-3-1-of-1.jpg",
-    desc: `Rice Sandwich, serving with soy sauce`,
+    "https://cdn.yemek.com/mncrop/940/625/uploads/2018/01/cig-borek-tarifi-guncelleme.jpg",
+    desc: `Yağ çekmemiş, ev yapımı çi börek.<br><br>Bir porsiyonu ortalama 305/kcal içerir.`,
   },
   {
     id: 7,
-    title: "Kola",
-    category: "İçecek",
-    price: 15.99,
+    title: "İçli Köfte",
+    category: "Ara Sıcak",
+    price: "19,99  TL",
     img:
-    "https://www.curiouscuisiniere.com/wp-content/uploads/2020/04/Jajangmyeon-Korean-Noodles-in-Black-Bean-Sauce5.1200H-720x540.jpg",
-    desc: `Black bean sauce noodle, serving with green onion `,
+    "https://cdn.yemek.com/mncrop/940/625/uploads/2014/06/icli-kofte-2-yemekcom.jpg",
+    desc: `Kızartma yöntemi ile pişirilmiş içli köfte.<br><br>Bir porsiyonu ortalama 337/kcal içerir.`,
   },
   {
     id: 8,
-    title: "Meyve Suyu",
+    title: "Ayran",
     category: "İçecek",
-    price: 12.99,
+    price: "9,99  TL",
     img:
-    "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/F688C2F6-86EC-46C4-B9C7-A6BA01DF7437/Derivates/32E3E72A-F786-406D-AF7F-B30980A9AC6C.jpg",
-    desc: `Hot pepper sauce noodle, serving with soy bean and onion`,
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Yayik_ayrani.jpg/220px-Yayik_ayrani.jpg",
+    desc: `Ev yapımı yayık ayran. Soğuk servis edilir.`,
   },
   {
     id: 9,
-    title: "Maden Suyu",
+    title: "Limonata",
     category: "İçecek",
-    price: 3.99,
+    price: "14,99  TL",
     img:
-    "https://www.justonecookbook.com/wp-content/uploads/2011/10/Dorayaki-New-500x400.jpg",
-    desc: `Red bean paste dessert, serving with honey.`,
+    "https://cdn.yemek.com/mncrop/940/625/uploads/2014/08/ev-yapimi-limonata-yemekcom.jpg",
+    desc: `Ev yapımı limonata. Nane ile birlikte soğuk servis edilir.`,
   },
+  { id: 10, 
+    title: "Sütlaç",
+    category: "Tatlı",
+    price: "19,99  TL",
+    img:
+    "https://cdn.yemek.com/mnresize/1250/833/uploads/2019/05/sutlac-guncelleme-sunum-1.jpg",
+    desc: "Doğal çiftlik sütü ile yapılmış enfes sütlaç.<br><br>Bir porsiyonu ortalama 265/kcal içerir."
+  }
+  
 ];
 
 let btnContainerDOM = document.querySelector(".btn-container");
@@ -90,6 +99,7 @@ const menuItemDOM = document.getElementsByClassName("menu-items");
 let anayemekmenu =[];
 let arasicakmenu = [];
 let icecekmenu = [];
+let tatlimenu = [];
 
 for (let i = 0; i < menu.length; i++) {
   if(menu[i].category === "Ana Yemek"){
@@ -107,6 +117,12 @@ for (let i = 0; i < menu.length; i++) {
 for (let i = 0; i < menu.length; i++) {
   if(menu[i].category === "İçecek"){
     icecekmenu.push(menu[i]);
+  }
+}
+
+for (let i = 0; i < menu.length; i++) {
+  if(menu[i].category === "Tatlı"){
+    tatlimenu.push(menu[i]);
   }
 }
 
@@ -129,6 +145,7 @@ btnDOMFunction("Ara Sicak", "arasicakmenu");
 // let btnDOMJapan = document.querySelector("#Japan");
 btnDOMFunction("İçecek", "icecekmenu");
 // let btnDOMChina = document.querySelector("#China");
+btnDOMFunction("Tatlı", "tatlimenu");
 
 
 
